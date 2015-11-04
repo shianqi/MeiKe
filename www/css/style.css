@@ -1,0 +1,76 @@
+/* Empty. Add your own CSS if you like */
+.col{
+    margin:5px;
+    height:85px;
+    text-align:center;
+    line-height:32px;
+}
+.col.light div{
+    text-align:left;
+}
+.col .icon{
+    font-size:32px;
+}
+.col1{
+    height:30px;
+    fontsize:30px;
+}
+.box{
+    height:200px;
+    width:100%;
+}
+
+#SearchButton{
+    border-radius: 2px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    background-color:#4b8bf4;
+    padding: 6px;
+    margin-left: 10px;
+    width: 60px;
+}
+
+.textaligncenter {
+    text-align: center;
+}
+
+.floatright {
+    float: right;
+}
+
+.margintop {
+    margin-top: 5px;
+}
+.smallicon
+{
+    width:20px;
+    height: 20px;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+
+.moresmallicon
+{
+    width:16px;
+    height: 16px;
+    vertical-align: bottom;
+    margin-right: 3px;
+}
+.searchengineitem
+{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.scroll-refresher {
+    width: 100%;
+}
+
+.bar .back-button.hide, .bar .buttons .hide
+{
+    display: inline !important;
+}
+
+#hasLogon{
+    display: none;
+}

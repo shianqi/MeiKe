@@ -1,0 +1,23 @@
+<div style="background-color: #999999">
+    <ion-header-bar class="bar-positive">
+        <a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.Me"></a>
+        <h1 class="title">查看个人信息</h1>
+    </ion-header-bar>
+    <ion-content>
+    <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <div>
+        <ion-list>
+            <ion-item ng-repeat="item in items"  style="background-color: #ffffff; margin: 3px; padding: 25px; border-radius: 6px;">
+                <a calss="item-content" >
+                    <h2 class="ng-binding">{{item.className}}</h2>
+                    <p class="summary ng-binding">{{item.whichDayInWeek}}</p>
+                </a>
+            </ion-item>
+        </ion-list>
+    </div>
+    </ion-content>
+</div>

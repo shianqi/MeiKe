@@ -1,0 +1,31 @@
+<ion-view view-title="搜索" class="calm">
+    <ion-content style="background: url(img/IDontKnowbyFengHao.jpg) center; background-size: cover;">
+        <ion-header-bar class="bar-positive item-input-inset">
+            <a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.dash"></a>
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input ng-model="Search.keyWord" type="search" placeholder="搜课程,搜老师,搜机构" />
+            </label>
+            <button ng-click="StartSearch(Search.keyWord)" id="SearchButton" ui-sref="search" class="ink">搜索</button>
+        </ion-header-bar>
+        <!--<div class="bar bar-header bar-stable item-input-inset">-->
+        <!--<div class="icon"></div>-->
+        <!--<a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.dash"></a>-->
+        <!--<label class="item-input-wrapper">-->
+        <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+        <!--<input ng-model="Search.keyWord" type="search" placeholder="大家都在搜：蓝翔" />-->
+        <!--</label>-->
+        <!--<button ng-click="StartSearch(Search)" id="SearchButton" ui-sref="search">搜索</button>-->
+        <!--</div>-->
+        <div>
+            <ion-list>
+                <ion-item ng-repeat="item in items" href="#/search/{{item.id}}" style="background-color: #ffffffff; margin: 3px; padding: 25px; border-radius: 6px;">
+                    <a calss="item-content" >
+                        <h2 class="ng-binding">{{item.name}}</h2>
+                        <p class="summary ng-binding">{{item.description}}</p>
+                    </a>
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

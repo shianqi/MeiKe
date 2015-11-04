@@ -1,0 +1,37 @@
+<ion-view view-title="搜索" class="calm">
+    <ion-content style="background: url(img/IDontKnowbyFengHao.jpg) center; background-size: cover;">
+        <ion-header-bar class="bar-positive item-input-inset">
+            <a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.dash"></a>
+            <label class="item-input-wrapper">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+                <input ng-model="Search.keyWord" type="search" placeholder="搜课程,搜老师,搜机构" />
+            </label>
+            <button ng-click="StartSearch(Search.keyWord)" id="SearchButton" ui-sref="search" class="ink">搜索</button>
+        </ion-header-bar>
+        <!--<div class="bar bar-header bar-stable item-input-inset">-->
+        <!--<div class="icon"></div>-->
+        <!--<a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.dash"></a>-->
+        <!--<label class="item-input-wrapper">-->
+        <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+        <!--<input ng-model="Search.keyWord" type="search" placeholder="大家都在搜：蓝翔" />-->
+        <!--</label>-->
+        <!--<button ng-click="StartSearch(Search)" id="SearchButton" ui-sref="search">搜索</button>-->
+        <!--</div>-->
+        <div>
+            <ion-list>
+                <ion-item ng-repeat="item in items" href="#/search/{{item.id}}" style="background-color: white; margin: 8px; border-radius: 6px; border: 1px; border-color:black" class="ink">
+                    <img ng-src="{{item.url}}" style="top:26px; padding: 0px; float: left;">
+                    <div style="width: 80%; height: 121px; padding-left: 130px; padding-right: 120px;">
+                        <div style=" height: 30px;  white-space: normal; position: absolute">
+                            <h2  style="float: left; font-size: 20px; padding-right: 10px;">{{item.name}}</h2>
+                        </div>
+                        <div style=" height: 70px; position:absolute;top: 50px">
+                            <h3 style="    white-space: normal;  padding-right: 10px; margin-right: 20px;">{{item.description}}</h3>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" namespace="/"
+		extends="struts-default, json-default">
+		<action name="login" class="com.imudges.meike.action.LoginAction">
+			<result name="success" type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">loginResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+		<action name="register" class="com.imudges.meike.action.RegisterAction">
+			<result name="success" type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">registerResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+
+
+		<action name="search" class="com.imudges.meike.action.SerachResultAction">
+			<result type="json" name="ok">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">resultList</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="chooseClasses" class="com.imudges.meike.action.ChooseClassesAction">
+			<result type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getClassInfo" class="com.imudges.meike.action.GetClassesInfo">
+			<result type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">classResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getClassmate" class="com.imudges.meike.action.GetClassmateAction">
+			<result type="json">
+			
+				<param name="root">classmateList</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getCommentByClassesId"
+			class="com.imudges.meike.action.GetCommentByClassesIdAction">
+			<result type="json">
+				<param name="root">commentList</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+		</action>
+		<action name="GetUsersCommentByUsersId"
+			class="com.imudges.meike.action.GetUsersCommentByUsersIdAction">
+			<result type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">list</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="GetUsersChooseClasses"
+			class="com.imudges.meike.action.GetUsersChooseClassesAction">
+			<result type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="GetLastClassList"
+			class="com.imudges.meike.action.GetLastClassesList">
+			<result type="json">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getCheckCode"
+			class="com.imudges.meike.action.GetCheckCodeAction">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">registerResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getUserInfo"
+			class="com.imudges.meike.action.GetUserInfoAction">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">loginResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="slidebox"
+			class="com.imudges.meike.action.SlideboxAction">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">slidebox</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="getIsChoose" class="com.imudges.meike.action.GetUsersIsChooseClass">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="searchByType2" class="com.imudges.meike.action.SearchByType2Action">
+			<result type="json" name="ok">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">resultList</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="searchByType3" class="com.imudges.meike.action.SearchByType3Action">
+			<result type="json" name="ok">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">resultList</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="getOrganizationInfo" class="com.imudges.meike.action.GetOrganizationInfoAction">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		
+		<action name="changePassword" class="com.imudges.meike.action.ChangePasswordAction">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">result</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="changeUserInfo" class="com.imudges.meike.action.ChangeUserInfo">
+			<result type="json" name="success">
+				<param name="callbackParameter">${callback}</param>
+				<param name="root">statusResult</param>
+				<param name="excludeNullProperties">true</param>
+				<param name="noCache">true</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+			<result name = "callback" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+		</action>
+		<action name="activeEmail" class="com.imudges.meike.webAction.ActiveEmailAction">
+			<result name="success">/jsp/success.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+	</package>
+</struts>    

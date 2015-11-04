@@ -1,0 +1,69 @@
+<link href="css/style.css" rel="stylesheet">
+
+  <ion-content style="background: url(img/IDontKnowbyFengHao.jpg) center; background-size: cover;">
+    <ion-header-bar class="bar-positive">
+      <h1 class="title">美课</h1>
+      <a class="button button-clear icon ion-ios-search" ui-sref="search"></a>
+    </ion-header-bar>
+    <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="doRefresh()">
+    </ion-refresher>
+
+    <ion-slide-box does-continue="true" auto-play="true" show-pager="ture" class="animated fadeInUpBig" style="top: 43px;">
+      <ion-slide>
+        <img src="{{slidebox.url1}}" height="200px" width="100%">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slidebox.url2}}" height="200px" width="100%">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{slidebox.url3}}" height="200px" width="100%">
+      </ion-slide>
+    </ion-slide-box>
+    <div class="row" style="top: 40px; position: relative">
+      <div class="col   positive-bg light animated bounceInLeft button ink" ng-click="Searchtype2()" href="#/search">
+        <div>公开课</div>
+        <i class="icon ion-ios-book"></i>
+      </div>
+      <div class="button col  calm-bg light animated zoomIn ink " ng-click="Searchtype3()" href="#/search">
+        <div>培训机构</div>
+        <i class="icon ion-easel"></i>
+      </div>
+      <div class="button col  assertive-bg light animated bounceInRight ink">
+        <div>mooc</div>
+        <i class="icon ion-university"></i>
+      </div>
+    </div>
+
+    <div class="row" style="top: 40px; position: relative">
+      <div class="button col  balanced-bg light animated bounceInLeft ink">
+        <div>考试机构</div>
+        <i class="icon ion-briefcase"></i>
+      </div>
+      <div class="button col energized-bg light animated zoomIn ink">
+        <div>热门排行</div>
+        <i class="icon ion-connection-bars"></i>
+      </div>
+      <div class="button col  royal-bg light animated bounceInRight ink">
+        <div>讨论社区</div>
+        <i class="icon ion-person-stalker"></i>
+      </div>
+    </div>
+
+    <div class="col1 calm-bg light " style="top: 40px; position: relative">
+      <div>猜你喜欢</div>
+    </div>
+    <div style="top: 40px; position: relative;>
+      <ul class="list">
+        <li class="item" ng-repeat="item in items" style="background-color: white; margin: 3px; padding: 25px; border-radius: 6px;" href="#/search/{{item.id}}">
+        <a>  {{item.name}}</a>
+          <b>{{item.description}}</b>
+        </li>
+      </ul>
+      <ion-infinite-scroll on-infinite="load_more();">
+      </ion-infinite-scroll>
+    </div>
+
+
+  </ion-content>

@@ -1,0 +1,43 @@
+<ion-header-bar class="bar-positive">
+    <a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.Me" onclick="showText()"></a>
+    <h1 class="title">注册</h1>
+</ion-header-bar>
+<script>
+    function showText(){
+        $('verificationClick').html("hh")
+    }
+</script>
+<ion-view view-title="用户注册">
+    <ion-content>
+        <div class="list" id="notLogin">
+            <label class="item item-input">
+                <input type="tel" placeholder="手机号" ng-model="data.tel">
+            </label>
+            <div>
+                <label class=" item-input" style="width: 50%; float: left">
+                    <input type="tel" placeholder="手机验证码" ng-model="data.verification">
+                </label>
+                <button id="verificationClick" style="width: 50%; float: left; position: absolute;" class="button button-block button-balanced" ng-click="getVerification()">{{getVerificationText||"获取验证码"}}</button>
+            </div>
+            <label class="item item-input">
+                <input type="text" placeholder="用户名" ng-model="data.username">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="密码" ng-model="data.password">
+            </label>
+            <label class="item item-input">
+                <input type="password" placeholder="确认密码" ng-model="data.passwordconfirm">
+            </label>
+
+
+
+            <button class="button button-block button-balanced" ng-click="register()">
+                <i class="icon ion-ios-personadd-outline"></i>&nbsp;注册
+            </button>
+
+            <button class="button button-block button-stable" ng-click="gotoaccount()">
+                <i class="icon ion-log-in"></i>&nbsp;已有账号？去登录
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

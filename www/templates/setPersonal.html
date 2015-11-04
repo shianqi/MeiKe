@@ -1,0 +1,37 @@
+<ion-header-bar class="bar-positive">
+    <a class="button button-clear icon ion-home ion-ios-arrow-back" ui-sref="tab.Me"></a>
+    <h1 class="title">修改个人信息</h1>
+</ion-header-bar>
+<ion-view>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="email" placeholder="邮箱" ng-model="fix.data1">
+            </label>
+
+            <label class="item item-input">
+                <input type="text" placeholder="用户名" ng-model="fix.data2">
+            </label>
+            <br>
+
+            <!--<div>-->
+                <!--<label class=" item-input" style="width: 50%; float: left">-->
+                    <!--<input type="image" placeholder="上传头像：" ng-model="">-->
+                <!--</label>-->
+                <!--<button id="verificationClick" style="width: 50%; float: left; position: absolute;" class="button button-block button-balanced" ng-click="()">{{get||"选择图片"}}</button>-->
+            <!--</div>-->
+
+            <button class="button button-block button-balanced " ng-click="setPersonInfor(fix)">
+                <i class="icon ion-ios-personadd-outline"></i>&nbsp;确认修改
+            </button>
+
+            <button class="button button-block button-energized" ng-click="setPassword()">
+                <i class="icon ion-ios-personadd-outline"></i>&nbsp;修改密码
+            </button>
+
+            <button class="button button-block button-stable" ng-click="gotoaccount()">
+                <i class="icon ion-log-in"></i>&nbsp;手滑了？点此返回
+            </button>
+        </div>
+    </ion-content>
+</ion-view>

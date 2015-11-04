@@ -1,0 +1,20 @@
+#MyEclipse Hibernate Properties
+#Tue Aug 18 18:33:29 CST 2015
+genBasicCompId=false
+sessionFactoryName=com.imudges.meike.DAO.HibernateSessionFactory
+profile=
+daoSFId=
+jndiPath=
+detectM2M=true
+reStrategyClass=
+detectO2O=false
+springDaoFile=
+useJavaTypes=true
+keyGenerator=
+genVersionTag=false
+sessionFactoryId=
+basePersistenceClass=
+genAnnotations=false
+reSettingsFile=
+configFile=/MeiKeWeb/src/hibernate.cfg.xml
+createConfigFile=true

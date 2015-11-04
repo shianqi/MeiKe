@@ -1,0 +1,18 @@
+<ion-view>
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">设置</h1>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+    <ion-toggle  ng-model="settings.enableFriends">
+        Enable Friends
+    </ion-toggle>
+        <a class="item" ng-click="feedback()">
+          意见反馈<i class="icon ion-ios-arrow-right floatright"></i>
+        </a>
+        <a class="item" ng-click="aboutus()">
+          关于<i class="icon ion-ios-arrow-right floatright"></i>
+        </a>
+    </ion-list>
+  </ion-content>
+</ion-view>
